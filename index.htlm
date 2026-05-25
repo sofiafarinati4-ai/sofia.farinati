@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofia Farinati | Portfolio</title>
+    <style>
+        /* Reset e Variabili */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        :root {
+            --bg-color: #0a0a0a;
+            --text-color: #ffffff;
+            --text-secondary: #8e8e93;
+            --accent-color: #34c759; /* Cambia questo colore per personalizzare il brand */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Header / Nav */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 2rem 4%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            backdrop-filter: blur(12px);
+            background: rgba(10, 10, 10, 0.7);
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: -0.5px;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--text-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 4%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            line-height: 1.1;
+            font-weight: 800;
+            letter-spacing: -0.03eM;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 span {
+            color: var(--text-secondary);
+        }
+
+        .hero-cta {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            width: fit-content;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        /* Sezione Progetti (Griglia stile Framer) */
+        .projects {
+            padding: 8rem 4%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            letter-spacing: -0.02em;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+            gap: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .project-card {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            group;
+        }
+
+        .project-image {
+            width: 100%;
+            aspect-ratio: 16/10;
+            background-color: #1c1c1e;
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Effetto hover sull'immagine */
+        .project-card:hover .project-image {
+            transform: scale(1.02);
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 5rem 4%;
+            text-align: center;
+            border-top: 1px solid #1c1c1e;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">SOFIA FARINATI</div>
+        <nav>
+            <a href="#projects">Progetti</a>
+            <a href="#about">Info</a>
+            <a href="mailto:tuamail@esempio.com">Contatto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="about">
+            <h1>Visual & Digital Designer.<br><span>Creo esperienze digitali che lasciano il segno.</span></h1>
+            <a href="#projects" class="hero-cta">Guarda i miei lavori</a>
+        </section>
+
+        <section class="projects" id="projects">
+            <h2 class="section-title">Progetti Selezionati</h2>
+            <div class="project-grid">
+                
+                <a href="#" class="project-card">
+                    <div class="project-image">
+                        </div>
+                    <h3>Nome Progetto Uno</h3>
+                    <p>Art Direction / Web Design</p>
+                </a>
+
+                <a href="#" class="project-card">
+                    <div class="project-image"></div>
+                    <h3>Nome Progetto Due</h3>
+                    <p>UI/UX Design / Brand Identity</p>
+                </a>
+
+                <a href="#" class="project-card">
+                    <div class="project-image"></div>
+                    <h3>Nome Progetto Tre</h3>
+                    <p>Motion Design</p>
+                </a>
+
+                <a href="#" class="project-card">
+                    <div class="project-image"></div>
+                    <h3>Nome Progetto Quattro</h3>
+                    <p>Sviluppo Web / Framer</p>
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sofia Farinati. Tutti i diritti riservati. Realizzato con HTML & CSS.</p>
+    </footer>
+
+</body>
+</html>
